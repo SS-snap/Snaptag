@@ -1,0 +1,11 @@
+flash_attn==2.6.3
+numpy==1.26.4
+Pillow==10.4.0
+PyQt5==5.15.11
+torch==2.1.2
+torchvision==0.16.2
+transformers==4.44.2
+bitsandbytes-0.43.3
+accelerate-0.33.0
+psutil-6.0.0
+python==3.10.11
