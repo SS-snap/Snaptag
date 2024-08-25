@@ -10,20 +10,20 @@ Snaptag is a Python application based on image processing and tag generation. Th
 
 ### 使用方法（Installation Steps）
 
-克隆仓库：
+#### 克隆仓库：
 
    ```bash
    git clone https://github.com/SS-snap/Snaptag.git
    ```
-下载MiniCPM-v2.6-int4至 Snaptag\models\model
+
+#### 下载MiniCPM-v2.6-int4至 Snaptag\models\model
 (Download MiniCPM-v2.6-int4 to Snaptag\models\model)
+请下载模型和相关配置文件至指定目录
+Please download the model and related configuration files to the specified directory
 模型地址：https://huggingface.co/openbmb/MiniCPM-V-2_6-int4/tree/main
 
-Download MiniCPM-v2.6-int4 to Snaptag\models\model
-
-
-定位到该目录
-   cd Snaptag
+#### 定位并创建环境
+   `cd Snaptag`
 
 创建虚拟环境： 建议使用 virtualenv 或 conda 创建一个虚拟环境来隔离依赖项：
 
@@ -36,14 +36,14 @@ Download MiniCPM-v2.6-int4 to Snaptag\models\model
 conda create -n snaptag_env python=3.10
 conda activate snaptag_env
   ```
-安装依赖（Install dependencies）
+#### 安装依赖（Install dependencies）
   ```bash
 pip install -r requirements.txt
   ```
-启动（Start the application）
+#### 启动（Start the application）
 
 `python run.py`
 
-### 联系我
+### 找到我
 
-![找到我](./assets/trans.png)
+![找到我](./assets/22.png)
