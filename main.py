@@ -5,18 +5,14 @@ from ui.ui import MainWindow
 from loadingmodel import load_model_and_tokenizer
 from PIL import Image
 
-
 class Application:
     def __init__(self):
 
         self.model, self.tokenizer = load_model_and_tokenizer()
 
-    def process_image(self, image_path):
-
+    def process_image(self, image_path, question):
         image = Image.open(image_path).convert('RGB')
-        question = 'What is in the image?'
         msgs = [{'role': 'user', 'content': [image, question]}]
-
 
         result = self.model.chat(
             image=None,
@@ -25,18 +21,15 @@ class Application:
         )
         return result
 
-    def process_images_in_folder(self, folder_path, output_folder):
-
+    def process_images_in_folder(self, folder_path, output_folder, question):
         results = []
         for image_file in os.listdir(folder_path):
             if image_file.endswith(('.png', '.jpg', '.jpeg')):  # 支持的图像格式
                 image_path = os.path.join(folder_path, image_file)
-                result = self.process_image(image_path)
-
+                result = self.process_image(image_path, question)  # 传递问题
 
                 image_name_prefix = os.path.splitext(image_file)[0]  # 获取图像文件名前缀
                 output_file_path = os.path.join(output_folder, f"{image_name_prefix}.txt")
-
 
                 with open(output_file_path, 'w') as output_file:
                     output_file.write(result)
@@ -64,13 +57,16 @@ def main():
             window.folder_label.setText(f"Selected Folder: {selected_folder}")
             window.process_button.setEnabled(True)
 
-
     def on_process_clicked():
         if selected_folder:
+            # 获取用户输入的问题，如果用户没有输入，则使用默认问题
+            question = window.question_input.toPlainText().strip()
+            if not question:  # 如果输入框为空
+                question = 'What is in the image?'  # 使用默认问题
 
-            results = application.process_images_in_folder(selected_folder, selected_folder)
+            # 传递问题并处理图像
+            results = application.process_images_in_folder(selected_folder, selected_folder, question)
             window.result_box.setText(results)
-
 
     window.select_folder_button.clicked.connect(on_folder_selected)
     window.process_button.clicked.connect(on_process_clicked)
