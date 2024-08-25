@@ -40,6 +40,9 @@ conda activate snaptag_env
   ```bash
 pip install -r requirements.txt
   ```
+#### 找到对应自己的cuda版本进行推理
+example
+`pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --index-url https://download.pytorch.org/whl/cu118`
 #### 启动（Start the application）
 
 `python run.py`
