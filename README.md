@@ -4,7 +4,22 @@ Snaptag 是一个基于图像处理和标签生成的 Python 应用程序。该�
 
 Snaptag is a Python application based on image processing and tag generation. The project uses libraries such as PyTorch, Transformers, and PyQt5 to perform batch image processing and generate corresponding tags using the MiniCPM-v2.6-int model. It supports automatic tagging for large volumes of images and provides an efficient user experience through a simple user interface
 
-![示例图片](./assets/updata.png)
+# Updated version（版本）
+截至到2024/8/26我添加了三个功能，“top_k,top_p,temperature”，你可以自定义这些数值的大小来确定返回的文字偏向 （准确性 // 想象力）
+As of 2024/8/26, I have added three features: "top_k, top_p, temperature." You can customize the values of these parameters to determine the bias of the generated text (accuracy or creativity).
+#### Parameter parsing（参数解析）
+top-k 选择固定数量的前 k 个词汇。
+top-p 是根据累积概率选择足够的词汇，直到达到指定的概率阈值。
+Temperature 控制了生成文本时的随机性
+
+top-k selects a fixed number of top k words.
+top-p selects enough words based on cumulative probability until a specified probability threshold is reached.
+Temperature controls the randomness of generated text
+
+## UI
+![示例图片](./assets/UI.png)
+
+![示例图片](./assets/pro.png)
 
 抖音：https://v.douyin.com/ih1RjPJx/ 3@7.com :4pm
 
