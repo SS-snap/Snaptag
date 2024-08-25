@@ -19,7 +19,7 @@ Temperature controls the randomness of generated text
 ## UI
 ![示例图片](./assets/UI.png)
 
-![示例图片](./assets/pro.png)
+![示例图片](./assets/pro.jpg)
 
 抖音：https://v.douyin.com/ih1RjPJx/ 3@7.com :4pm
 
