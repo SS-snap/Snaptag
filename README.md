@@ -1,14 +1,18 @@
 # Snap_tag
-# 请大家不要下载整合包，很抱歉浪费了大家的时间，因为我初次做这种整合项目，所以他依旧存在很大的问题，正在努力整改中
+
+### 整合包地址~如果帮到您，来颗星~
+通过网盘分享的文件：Snaptag.7z
+链接: https://pan.baidu.com/s/1PZOvpi1P2vb9hKc_JsYhMw?pwd=snap 提取码: snap 
+
 ## 概述
 Snaptag 是一个基于图像处理和标签生成的 Python 应用程序。该项目使用 PyTorch、Transformers 和 PyQt5 等库来进行图像批量处理，并通过MiniCPM-v2.6-int模型生成相应的标签。它支持对大量图像的自动标记，并通过简洁的用户界面提供高效的用户体验
 
 Snaptag is a Python application based on image processing and tag generation. The project uses libraries such as PyTorch, Transformers, and PyQt5 to perform batch image processing and generate corresponding tags using the MiniCPM-v2.6-int model. It supports automatic tagging for large volumes of images and provides an efficient user experience through a simple user interface
 
 # Updated version（版本更新）
-截至到2024/8/26我添加了整合包，大家可以下载百度网盘及夸克网盘的整合版本
-
-截至到2024/8/26我添加了三个功能，“top_k,top_p,temperature”，你可以自定义这些数值的大小来确定返回的文字偏向 （准确性 // 想象力）
+·截至到2024/8/27我解决了整合包环境错误问题！
+·截至到2024/8/26我添加了整合包，大家可以下载百度网盘及夸克网盘的整合版本
+·截至到2024/8/26我添加了三个功能，“top_k,top_p,temperature”，你可以自定义这些数值的大小来确定返回的文字偏向 （准确性 // 想象力）
 As of 2024/8/26, I have added three features: "top_k, top_p, temperature." You can customize the values of these parameters to determine the bias of the generated text (accuracy or creativity).
 #### Parameter parsing（参数解析）
 top-k 选择固定数量的前 k 个词汇。
