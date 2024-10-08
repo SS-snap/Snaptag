@@ -33,7 +33,7 @@ class Application:
                 image_name_prefix = os.path.splitext(image_file)[0]  # 获取图像文件名前缀
                 output_file_path = os.path.join(output_folder, f"{image_name_prefix}.txt")
 
-                with open(output_file_path, 'w') as output_file:
+                with open(output_file_path, 'w', encoding='utf-8') as output_file:
                     output_file.write(result)
 
                 results.append(f"图像: {image_file}\n成功保存至: {output_file_path}\n")
@@ -58,7 +58,7 @@ def main():
         if selected_folder:
             question = window.question_input.toPlainText().strip()
             if not question:
-                question = 'What is in the image?'
+                question = 'Describe this picture'
 
             # 获取top_k, top_p 和 temperature的滑块值
             top_k = window.top_k_slider.value()
